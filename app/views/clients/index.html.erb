@@ -1,0 +1,28 @@
+<p class="text-success"><%= notice %></p>
+
+<div class="container">
+  <h1 class="mt-5">Clients</h1>
+
+  <%= link_to "New client", new_client_path, class: "btn btn-primary mb-3 btn-lg" %>
+
+  <div id="clients">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Movie</th>
+            <th scope="col" colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @clients.each do |client| %>
+            <%= render client %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

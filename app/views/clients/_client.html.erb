@@ -1,0 +1,11 @@
+<div id="<%= dom_id client %>">
+  <tr>
+    <th scope="row"><%= client.id %></th>
+    <td><%= client.name %></td>
+    <td><%= client.age %></td>
+    <td><%= client.movies.last %></td>
+    <td><%= link_to "Show this client", client, class: "btn btn-primary mb-3 btn-lg" %></td>
+    <td><%= link_to "Edit this client", edit_client_path(client), class: "btn btn-primary mb-3 btn-lg" %></td>
+    <td><%= button_to "Destroy this client", @client, method: :delete, class: "btn btn-primary mb-3 btn-lg" %></td>
+  </tr>
+</div>
